@@ -154,3 +154,16 @@ export function FinalCTA() {
     </section>
   );
 }
+
+export function FloatingContactBar() {
+  return (
+    <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-[0_-4px_20px_-1px_rgba(0,0,0,0.1)] z-50 flex">
+      <a href={`tel:${contactInfo.phone}`} className="flex-1 py-4 flex items-center justify-center gap-2 text-gray-900 font-semibold tracking-wider uppercase text-sm border-r border-gray-200 hover:bg-gray-50 transition-colors">
+        <Phone size={18} /> Call
+      </a>
+      <a href={`https://wa.me/${contactInfo.whatsapp}`} target="_blank" rel="noreferrer" className="flex-1 py-4 flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold tracking-wider uppercase text-sm hover:bg-[#20bd5a] transition-colors">
+        <MessageCircle size={18} /> WhatsApp
+      </a>
+    </div>
+  );
+}
